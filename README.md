@@ -3,25 +3,35 @@
 Dataset: [Cardiotocography](https://archive.ics.uci.edu/dataset/193/cardiotocography)
 
 Team TM-74:
+
 - Aaron Soh Jun Qi
 - Iain Demetriuss Chin Yi Rong
 - A.Siva Meyyappan
 
 ### Usage
+
 1. Install required libraries
+
 ```bash
 $ pip install -r requirements.txt
 ```
 
-2. Train the model in `datathon.ipynb`
+2. Train the model in `datathon.ipynb` or with the training script
+
+```bash
+$ python train.py -o models/
+```
 
 3. Evaluate the model using the provided evaluation harness
+
 ```bash
 $ python eval.py -m models/lgbm_final.pkl -e data/CTG.csv
 ```
 
 ### Results
+
 LightGBM, 20% hidden test set, stratified
+
 ```
 Accuracy: 0.9645
 Precision (weighted): 0.9643
